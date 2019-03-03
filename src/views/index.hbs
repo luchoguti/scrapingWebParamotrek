@@ -1,0 +1,18 @@
+{{#each dataJson as |dataTours nameTypeTour|}}
+<div class="row">
+    <div class="col-sm-12 alert alert-info" role="alert">
+        <h4>{{ nameTypeTour }}</h4>
+    </div>
+    {{#each dataTours as |dataObj key| }}
+    <div class="col-sm-4 pb-3">
+        <div class="card">
+            <img class="card-img-top" src="{{ dataObj.img }}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{ dataObj.title }}</h5>
+                <p class="card-text">{{ dataObj.description }}</p>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+{{/each}}
