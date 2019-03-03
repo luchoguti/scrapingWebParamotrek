@@ -4,7 +4,7 @@ const getJson = require('../models/getJson');
 localStorage = new LocalStorage('./scratch');
 
 router.get('/', async(request, response) => {
-    const url = "/scraping/paramotrek";
+    const url = "https://scripingwebparamotrek.herokuapp.com/scraping/paramotrek";
     const dataJson = await getJson.getData(url);
     localStorage.setItem('scripingParamotrek',JSON.stringify(dataJson));
     response.render('index',{dataJson});
